@@ -5,29 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wixxa Properties</title>
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="assets/css/Style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- AOS Library -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
 
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
-          <img src="assets/images/Wixxalogo.png" alt="Wixxa Properties Logo" aria-label="Wixxa Properties">
+          <img src="assets/images/Wixxalogo.png" alt="Wixxa Properties Official Logo">
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="Aboutus.html">About Us</a></li>
             <li><a href="#completedprojects">Completed Projects</a></li>
             <li><a href="#upcomingprojects">Upcoming Projects</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </nav>
         <!-- The 'View Contact No' button with an icon -->
@@ -79,10 +81,10 @@
           <div class="stat-icon">
             <img src="assets/images/calendar icon.png" alt="Years of Experience">
           </div>
-          <div class="stat-details">
-            <h3 class="stat-number">30</h3>
+          <div class="stat-item">
+            <h3 id="experience-counter" class="stat-number">30</h3>
             <p class="stat-description">Years of Experience</p>
-          </div>
+        </div>        
         </div>
         <div class="stat-item">
           <div class="stat-icon">
@@ -113,15 +115,20 @@
         </div>
       </div>
       <div class="testimonial-slider">
-        <div class="testimonial">
-          <p>"Wixxa Properties helped us find our dream home. Great service and support!"</p>
-          <p>- Hariharan E</p>
+        <div class="testimonial active">
+            <p>"Wixxa Properties helped us find our dream home. Great service and support!"</p>
+            <p>- Hariharan E</p>
         </div>
         <div class="testimonial">
-          <p>"A fantastic experience from start to finish. Highly recommend Wixxa Properties!"</p>
-          <p>- Anuradha R </p>
+            <p>"A fantastic experience from start to finish. Highly recommend Wixxa Properties!"</p>
+            <p>- Anuradha R</p>
         </div>
-      </div>
+        <div class="testimonial">
+            <p>"Professional, reliable, and outstanding results. Wixxa Properties exceeded our expectations!"</p>
+            <p>- Krishna S</p>
+        </div>
+    </div>
+    
     </section>
      
     <!-- Featured Listings -->
@@ -148,7 +155,7 @@
         <div class="footer-section contact-info">
           <h3>Contact Info</h3>
           <ul>
-            <li>📍 123, Example Street, Chennai, India</li>
+            <li>📍 Jothi Ramalingam St,West Mambalam,Chennai </li>
             <li>📞 +91 9841405549</li>
             <li>📧 wixxaproperties@gmail.com</li>
           </ul>
@@ -170,5 +177,24 @@
         });
       });
     </script>    
+    <script>
+      // Wait for the page to load completely
+      window.addEventListener('load', () => {
+          const experienceCounter = new CountUp('experience-counter', 30);
+          experienceCounter.start();
+      });
+  </script>  
+  <script>
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+
+    function showNextTestimonial() {
+        testimonials[currentTestimonial].classList.remove('active');
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        testimonials[currentTestimonial].classList.add('active');
+    }
+
+    setInterval(showNextTestimonial, 3000); // Change every 3 seconds
+</script>
 </body>
 </html>
