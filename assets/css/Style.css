@@ -38,9 +38,9 @@ nav ul li a:hover {
   color: white;
 }
 
-nav ul li a:active {
-  background-color: #45a049;
-  color: white;
+nav ul li a.active {
+  border-bottom: 2px solid #4CAF50;
+  color: #4CAF50;
 }
 
 /* View Contact Button */
@@ -79,14 +79,15 @@ nav ul li a:active {
   color: #fff;
 }
 
-.find-home-section .video-background {
+.video-background::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  z-index: 1;
 }
 
 #background-video {
@@ -96,14 +97,14 @@ nav ul li a:active {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
 }
 
 .find-home-section .container {
   position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  z-index: 2; /* Ensure text is above the gradient */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add text shadow for visibility */
 }
 
 .find-home-section h2 {
@@ -324,6 +325,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
 /* Smooth Scroll */
 html {
@@ -373,12 +376,16 @@ html {
   transform: translateZ(0) scale(1.1);
 }
 body {
+  padding: 0;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
-  line-height: 1.6; /* Improve text readability */
+}
+section {
+  padding: 50px 20px;
 }
 
 h2, h3, h4 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -389,8 +396,19 @@ p {
 .testimonial-slider {
   display: flex;
   overflow: hidden;
-  margin: 20px auto;
-  width: 80%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+  opacity: 1;
 }
 
 .testimonial {
@@ -426,4 +444,180 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Container to center content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Flexbox Layout */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Add some space between the sections */
+  flex-wrap: wrap; /* Allow the content to wrap in smaller screens */
+}
+
+/* Form Section */
+.contact-form {
+  width: 48%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Contact Info Section */
+.contact-info {
+  width: 48%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.contact-info h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact-info ul li i {
+  color: #4CAF50;
+  margin-right: 10px;
+}
+
+/* Google Map Section */
+.google-map iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer Section */
+footer {
+  background: #333;
+  color: #fff; /* Default footer font color */
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  color: #8b0000;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+/* Change font color for "Contact Us" section in footer */
+.footer-section.contact-info {
+  color: #000; /* Set text color to black for the "Contact Us" section */
+}
+
+.footer-section.contact-info ul li {
+  color: #000; /* Change font color for the list items in "Contact Us" */
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #8b0000;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 12px;
+}
+/* Submit Button - Enhanced Professional Style */
+.contact-form .submit-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 25px;
+  background-color: #007bff; /* Primary color for the button */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Fully rounded corners for a modern look */
+  cursor: pointer;
+  font-size: 18px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center the text */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  margin-top: 20px; /* Adds some space above the button */
+}
+
+/* Hover Effect - Button */
+.contact-form .submit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Lift the button slightly */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Active State - Button */
+.contact-form .submit-btn:active {
+  background-color: #004085; /* Even darker blue when clicked */
+  transform: translateY(0); /* Button returns to normal position */
+  box-shadow: none; /* Remove shadow when clicked */
+}
+
+
 
