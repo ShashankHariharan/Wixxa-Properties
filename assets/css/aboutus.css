@@ -1,0 +1,304 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section with Sticky and Transparent Effect */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+  padding: 10px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Makes the header sticky */
+  top: 0;
+  z-index: 1000; /* Ensure header stays on top */
+  backdrop-filter: blur(10px); /* Adds blur effect to the background */
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid #4CAF50;
+  color: #4CAF50;
+}
+
+/* View Contact Button */
+.view-contact-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.view-contact-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-contact-btn:active {
+  background-color: #388e3c;
+}
+
+.view-contact-btn i {
+  margin-right: 10px;
+}
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  text-align: center;
+}
+
+.hero-section .hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-size: 58px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-overlay p {
+  font-size: 20px;
+  margin-top: 10px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* About Wixxa Section */
+.about-wixxa {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.about-wixxa h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-wixxa p {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+}
+
+/* Founder and Co-Founder Section */
+.founder-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.founder-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.founder-section .grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.founder, .co-founder {
+  max-width: 300px;
+  text-align: center;
+}
+
+.founder img, .co-founder img {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.founder img:hover, .co-founder img:hover {
+  transform: scale(1.1);
+}
+
+.founder h3, .co-founder h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.founder p, .co-founder p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Why Choose Wixxa Section */
+.why-choose-wixxa {
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+}
+
+.why-choose-wixxa h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.why-choose-wixxa ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why-choose-wixxa ul li {
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.why-choose-wixxa ul li:before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-size: 20px;
+}
+
+/* Core Values Section */
+.core-values {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.core-values h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.core-values .grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.value-item {
+  max-width: 300px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-10px);
+}
+
+.value-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.value-item h3 {
+  font-size: 22px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.value-item p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}

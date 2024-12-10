@@ -1,0 +1,725 @@
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid #4CAF50;
+  color: #4CAF50;
+}
+
+/* View Contact Button */
+.view-contact-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.view-contact-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-contact-btn:active {
+  background-color: #388e3c;
+}
+
+.view-contact-btn i {
+  margin-right: 10px;
+}
+
+/* Find Home Section */
+.find-home-section {
+  position: relative;
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.video-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.find-home-section .container {
+  position: relative;
+  z-index: 2; /* Ensure text is above the gradient */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add text shadow for visibility */
+}
+
+.find-home-section h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.find-home-section p {
+  font-size: 22px;
+  color: #f2f2f2;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.search-input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid #ddd;
+  margin-right: 10px;
+  width: 50%;
+  max-width: 500px;
+}
+
+.search-btn {
+  padding: 12px 20px;
+  background-color: #f2d398;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #e0c37b;
+}
+
+/* Quote Image Section */
+.quote-image-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.quote-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+#background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.quote-container {
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.quote-container:hover {
+  transform: scale(1.05); /* Slightly enlarge the quote on hover */
+}
+
+.quote-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.quote-author {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Stats Section */
+.stats-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  max-width: 320px;
+  flex: 1;
+  min-width: 260px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.stat-icon {
+  background-color: #007bff;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.stat-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.stat-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.stat-description {
+  font-size: 16px;
+  color: #666666;
+}
+
+.stats-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #8b0000;
+  margin-bottom: 10px;
+}
+
+.stats-subheading {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Footer Section */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: 10px 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #8b0000;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #8b0000;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 12px;
+}
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* Hero Section Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.find-home-section .container {
+  animation: fadeIn 2s ease-out;
+}
+/* Button Hover Effects */
+.view-contact-btn {
+  transition: transform 0.3s ease-in-out;
+}
+
+.view-contact-btn:hover {
+  transform: scale(1.05);
+}
+.stats-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  flex: 1 1 calc(25% - 20px); /* Adjusts the number of columns */
+  box-sizing: border-box;
+}
+/* Parallax Scrolling Effect */
+.find-home-section .video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  transform: translateZ(0) scale(1.1);
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+section {
+  padding: 50px 20px;
+}
+
+h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.testimonial-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+  opacity: 1;
+}
+
+.testimonial {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #cc7a00;
+}
+/* CSS Grid Example */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Container to center content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Flexbox Layout */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Add some space between the sections */
+  flex-wrap: wrap; /* Allow the content to wrap in smaller screens */
+}
+
+/* Form Section */
+.contact-form {
+  width: 48%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Contact Info Section */
+.contact-info {
+  width: 48%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.contact-info h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact-info ul li i {
+  color: #4CAF50;
+  margin-right: 10px;
+}
+
+/* Google Map Section */
+.google-map iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer Section */
+footer {
+  background: #333;
+  color: #fff; /* Default footer font color */
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  color: #8b0000;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+/* Change font color for "Contact Us" section in footer */
+.footer-section.contact-info {
+  color: #000; /* Set text color to black for the "Contact Us" section */
+}
+
+.footer-section.contact-info ul li {
+  color: #000; /* Change font color for the list items in "Contact Us" */
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #8b0000;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 12px;
+}
+/* Submit Button - Enhanced Professional Style */
+.contact-form .submit-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 25px;
+  background-color: #007bff; /* Primary color for the button */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Fully rounded corners for a modern look */
+  cursor: pointer;
+  font-size: 18px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center the text */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  margin-top: 20px; /* Adds some space above the button */
+}
+
+/* Hover Effect - Button */
+.contact-form .submit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Lift the button slightly */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Active State - Button */
+.contact-form .submit-btn:active {
+  background-color: #004085; /* Even darker blue when clicked */
+  transform: translateY(0); /* Button returns to normal position */
+  box-shadow: none; /* Remove shadow when clicked */
+}
+.cta-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.featured-projects {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links li a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: #007bff;
+}
+.property-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.property-card button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.property-card button:hover {
+  background-color: #0056b3;
+}
+
+
