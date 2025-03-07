@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wixxa Properties | Real Estate Experts</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f9;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        header, footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        header h1, footer p {
+            margin: 0;
+        }
+        nav {
+            background-color: #00509e;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 2em 5%;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            color: #003366;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('https://wallpapercave.com/wp/wp4110643.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 5%;
+        }
+        #hero h2 {
+            font-size: 2.5em;
+            margin: 0.5em 0;
+        }
+        #hero p {
+            font-size: 1.2em;
+            color: black; /* Changed text color to black */
+        }
+        #hero button {
+            padding: 0.8em 1.5em;
+            font-size: 1em;
+            background: #ffcc00;
+            color: #003366;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #hero button:hover {
+            background: #e6b800;
+        }
+
+        /* About Section */
+        #about p {
+            line-height: 1.6;
+            text-align: justify;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        /* Properties Section */
+        .property-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .property-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .property-card:hover {
+            transform: scale(1.05);
+        }
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .property-card h3, .property-card p {
+            padding: 10px;
+            margin: 0;
+        }
+        .property-card .price {
+            color: #003366;
+            font-weight: bold;
+        }
+
+        /* Contact Form */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background: #003366;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form input[type="submit"]:hover {
+            background: #00509e;
+        }
+
+        /* Footer */
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wixxa Properties</h1>
+        <p>Your Gateway to Luxurious Real Estate</p>
+    </header>
+
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#properties">Properties</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#management">Management</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Find Your Dream Property Today</h2>
+        <p>Explore the finest properties for sale and rent. Luxury, Comfort, and Style await you.</p>
+        <button>View Listings</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Wixxa Properties, we are more than just a real estate company — we are your trusted partner in finding the perfect property. Established with the vision of transforming the real estate experience, Wixxa Properties specializes in providing exceptional services in residential, commercial, and investment properties.
+
+            Our team of experienced professionals is dedicated to understanding your unique needs and delivering personalized solutions. Whether you’re searching for your dream home, looking to expand your business space, or seeking lucrative investment opportunities, Wixxa Properties is here to guide you every step of the way.
+            
+            With a commitment to integrity, innovation, and excellence, we combine market expertise with a customer-first approach to help you achieve your property goals. At Wixxa Properties, we turn your vision into reality, one property at a time.
+            
+            Wixxa Properties — Your Gateway to Real Estate Excellence.
+            
+            
+            
+            
+            
+            
+            </p>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties">
+        <h2>Our Featured Properties</h2>
+        <div class="property-list">
+            <div class="property-card">
+                <img src="https://t4.ftcdn.net/jpg/01/12/28/01/360_F_112280116_28jgDJQv4zmJYHxI5ZDW7eZPTlRUvGRn.jpg" alt="Wixxa Sakthi">
+                <h3>Wixxa Sakthi</h3>
+                <p class="price">₹10,00,000</p>
+                <p>West Mambalam, Chennai</p>
+            </div>
+            <div class="property-card">
+                <img src="https://t4.ftcdn.net/jpg/00/71/74/29/360_F_71742923_SxOK3IzhX1Vv09O70REwisyWnNFfJZMb.jpg" alt="Modern Apartment">
+                <h3>Modern Apartment</h3>
+                <p class="price">₹7,50,000</p>
+                <p>Arakkonam,Chennai</p>
+            </div>
+            <div class="property-card">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/200310023921-dubai-buildings-skyline.jpg?q=w_2000,c_fill" alt="Office Space">
+                <h3>Office Space</h3>
+                <p class="price">₹22,00,000</p>
+                <p>Dubai Main Rd, Dubai </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Management Section -->
+    <section id="management">
+        <h2>Meet Our Family Members</h2>
+        <p>Family Of Wixxa Properties.</p>
+        <ul>
+            <li><strong>Hariharan E</strong> - King</li>
+            <li><strong>Anuradha R</strong> - Queen</li>
+            <li><strong>Shashank Hariharan</strong> - Pricess 1 </li>
+            <li><strong>Harshad Hariharan</strong> - Pricess 2 </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Wixxa Properties. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

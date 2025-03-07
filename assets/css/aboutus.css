@@ -91,6 +91,7 @@ nav ul li a.active {
 }
 
 
+
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -263,23 +264,23 @@ nav ul li a.active {
 }
 
 .value-item {
-  max-width: 300px;
   text-align: center;
-  background: white;
+  padding: 20px;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .value-item img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
 }
 
 .value-item h3 {
@@ -301,4 +302,104 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
+}
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  gap: 20px;
+  justify-content: center;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.carousel img {
+  border-radius: 50%;
+  width: 80%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel img:hover {
+  transform: scale(1.1);
+}
+
+.carousel h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.carousel p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+      font-size: 36px;
+  }
+
+  .grid {
+      flex-direction: column;
+  }
+
+  .carousel {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .value-item {
+      max-width: 100%;
+  }
+}
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* Button Hover Effects */
+.hero-btn:hover,
+.view-contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
 }

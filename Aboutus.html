@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- AOS Library -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <!-- Header -->
@@ -28,23 +32,22 @@
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
-        </nav>
+        </nav>      
         <!-- View Contact Button -->
         <button class="view-contact-btn">
             <i class="fas fa-phone"></i> View Contact No.
         </button>
-    </header>
+    </header>   
 
     <!-- About Wixxa Section -->
-    <section class="about-wixxa" data-aos="fade-up">
-        <div class="container">
-            <h2>About Wixxa Properties</h2>
-            <p>
-                For over three decades, Wixxa Properties has been redefining real estate by delivering premium, innovative, 
-                and sustainable living spaces. Our legacy is built on trust, quality, and a deep commitment to customer satisfaction.
-            </p>
-        </div>
-    </section>
+<section class="about-wixxa" id="about">
+    <div class="container">
+        <h2>About Wixxa Properties</h2>
+        <p>
+            For over three decades, Wixxa Properties has been delivering premium, innovative, and sustainable living spaces. Our legacy is built on trust, quality, and deep customer satisfaction.
+        </p>
+    </div>
+</section>
 
     <!-- Mission and Vision Section -->
     <section class="mission-vision" data-aos="fade-up">
@@ -124,13 +127,27 @@
             </div>
         </div>
     </section>
+    <!-- Hamburger Menu -->
+<div class="hamburger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 
     <!-- Footer -->
     <footer>
         <div class="footer-container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
             <p>&copy; 2024 Wixxa Properties. All Rights Reserved.</p>
         </div>
     </footer>
+    
 
     <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
